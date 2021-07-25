@@ -5,7 +5,15 @@ import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
-const Navigation = ({ isOpen, setIsOpen }) => {
+const Navigation = ({
+  isOpen,
+  setIsOpen,
+  shows,
+  setShows,
+  query,
+  setQuery,
+  setShowIsLoaded,
+}) => {
   return (
     <div className="navigation">
       <Container>
@@ -22,7 +30,13 @@ const Navigation = ({ isOpen, setIsOpen }) => {
           </NavLink>
 
           <Nav id="nav-links" className="nav-links">
-            <SearchBar />
+            <SearchBar
+              shows={shows}
+              setShows={setShows}
+              query={query}
+              setQuery={setQuery}
+              setShowIsLoaded={setShowIsLoaded}
+            />
           </Nav>
         </NavBar>
       </Container>

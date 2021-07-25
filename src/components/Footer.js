@@ -21,29 +21,7 @@ const Footer = () => {
           </div>
           <div id="footer-links">
             <NavBar>
-              <Nav id="footer-nav" className="nav-links">
-                <NavLink
-                  className="navigation-link"
-                  to="/headphones"
-                  target="_top"
-                >
-                  Actors
-                </NavLink>
-                <NavLink
-                  className="navigation-link"
-                  to="/speakers"
-                  target="_top"
-                >
-                  TV Shows
-                </NavLink>
-                <NavLink
-                  className="navigation-link"
-                  to="/earphones"
-                  target="_top"
-                >
-                  Directors
-                </NavLink>
-              </Nav>
+              <Nav id="footer-nav" className="nav-links"></Nav>
             </NavBar>
             <div id="social-links">
               <a href="/" alt="" className="social-link">

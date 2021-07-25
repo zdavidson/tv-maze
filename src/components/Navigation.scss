@@ -1,6 +1,5 @@
 .navigation {
   // General Styles
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.26);
 
   font-size: 0.8rem;
 
@@ -20,6 +19,15 @@
     text-decoration: none;
   }
 
+  #tv-maze {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  #tv-maze:hover {
+    color: goldenrod;
+  }
   // Small Screens
   @media screen and (max-width: 600px) {
     .nav-links {

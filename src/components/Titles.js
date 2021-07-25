@@ -1,6 +1,8 @@
 import "./Titles.scss";
+import { Link } from "react-router-dom";
 
-const Titles = ({ shows, showIsLoaded }) => {
+const Titles = ({ shows, showIsLoaded, display, setDisplay }) => {
+  console.log(shows);
   return (
     <div id="titles">
       <h4 id="titles-header">Titles</h4>
@@ -8,24 +10,33 @@ const Titles = ({ shows, showIsLoaded }) => {
         {showIsLoaded ? (
           shows.map((item) => {
             return (
-              <div class="result-container">
+              <div
+                className="result-container"
+                key={Math.floor(Math.random() * 10000)}
+              >
                 {item.show.image ? (
                   <img
                     src={item.show.image.medium}
                     alt="show-poster"
-                    class="result-img"
+                    className="result-img"
+                    key={item.id}
                   />
                 ) : (
                   <img
                     src="https://freaklab.org/wp-content/uploads/2017/08/portrait-placeholder-grey.gif"
                     alt="show-poster-placeholder"
-                    class="result-img placeholder-img"
+                    className="result-img placeholder-img"
+                    key={item.id}
                   />
                 )}
 
-                <a class="show-link" href={item.show.url}>
+                <Link
+                  className="show-link"
+                  to="/showCard"
+                  onClick={() => setDisplay(!display)}
+                >
                   {item.show.name}
-                </a>
+                </Link>
               </div>
             );
           })

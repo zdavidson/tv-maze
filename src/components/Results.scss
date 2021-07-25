@@ -1,4 +1,4 @@
-#main {
+#results-container {
   // General Styles
   #results {
     border: 1px solid lightgray;
@@ -9,31 +9,9 @@
     font-size: 1.5rem;
   }
 
-  #search-results {
-  }
-
   #titles-header {
     margin: 1rem 0;
     color: goldenrod;
-  }
-
-  .result-container {
-    background-color: rgb(241, 241, 241);
-    border: 1px solid white;
-    border-radius: 0.25rem;
-  }
-
-  .result-img {
-    height: 50px;
-    padding-right: 1rem;
-  }
-
-  .placeholder-img {
-    width: 51px;
-  }
-
-  .show-link {
-    text-decoration: none;
   }
 
   // Small Screens

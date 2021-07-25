@@ -13,6 +13,8 @@ const Navigation = ({
   query,
   setQuery,
   setShowIsLoaded,
+  display,
+  setDisplay,
 }) => {
   return (
     <div className="navigation">
@@ -25,7 +27,7 @@ const Navigation = ({
             }}
           ></div>
 
-          <NavLink id="logo" to="/">
+          <NavLink id="logo" to="/" onClick={() => setDisplay(!display)}>
             TV Maze
           </NavLink>
 
@@ -38,9 +40,9 @@ const Navigation = ({
               setShowIsLoaded={setShowIsLoaded}
             />
           </Nav>
-          <NavLink id="tv-maze" to="/">
+          <a id="tv-maze" href="https://www.tvmaze.com/api">
             API
-          </NavLink>
+          </a>
         </NavBar>
       </Container>
     </div>

@@ -1,0 +1,47 @@
+#landing {
+  // General Styles
+
+  #landing-images {
+    display: flex;
+
+    img {
+      padding: 1rem;
+    }
+  }
+
+  #logo {
+    background-color: goldenrod;
+    border-radius: 0.25rem;
+    color: #1a1a1a;
+    font-size: 4rem;
+    font-weight: 800;
+
+    text-align: center;
+    width: 400px;
+
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+  }
+
+  h2 {
+    padding-top: 2rem;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    padding: 2rem 12.5rem;
+  }
+}

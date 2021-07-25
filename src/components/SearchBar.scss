@@ -3,11 +3,19 @@
 
   display: flex;
 
-  #search-input {
+  #search-input,
+  #search-input-center {
     height: 3rem;
     border: none;
     padding: 1rem;
     border-radius: 0.25rem 0 0 0.25rem;
+  }
+
+  #search-input-center {
+    height: 4rem;
+    border: 1px solid grey;
+    padding: 1rem;
+    border-radius: 0.25rem;
   }
 
   #search-button {
@@ -33,6 +41,10 @@
   @media screen and (min-width: 960px) {
     #search-input {
       width: 30rem;
+    }
+
+    #search-input-center {
+      width: 60rem;
     }
   }
 }

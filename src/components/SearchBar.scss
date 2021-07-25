@@ -1,0 +1,38 @@
+#search-bar {
+  // General Styles
+
+  display: flex;
+
+  #search-input {
+    height: 3rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+
+  #search-button {
+    background-color: white;
+    border: none;
+    border-radius: 0 0.25rem 0.25rem 0;
+    padding: 0.5rem;
+  }
+
+  #magnifying-glass {
+    height: 22px;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    #search-input {
+      width: 30rem;
+    }
+  }
+}

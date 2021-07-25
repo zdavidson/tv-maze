@@ -10,8 +10,8 @@ const Footer = () => {
       <Container>
         <div id="footer-container">
           <div id="footer-text">
-            <NavLink to="/" target="_top">
-              <img id="footer-logo" src="./assets/shared/logo.svg" alt="logo" />
+            <NavLink id="logo" to="/" target="_top">
+              TV Maze
             </NavLink>
 
             <p>
@@ -22,50 +22,38 @@ const Footer = () => {
           <div id="footer-links">
             <NavBar>
               <Nav id="footer-nav" className="nav-links">
-                <NavLink className="navigation-link" to="/" target="_top">
-                  Home
-                </NavLink>
                 <NavLink
                   className="navigation-link"
                   to="/headphones"
                   target="_top"
                 >
-                  Headphones
+                  Actors
                 </NavLink>
                 <NavLink
                   className="navigation-link"
                   to="/speakers"
                   target="_top"
                 >
-                  Speakers
+                  TV Shows
                 </NavLink>
                 <NavLink
                   className="navigation-link"
                   to="/earphones"
                   target="_top"
                 >
-                  Earphones
+                  Directors
                 </NavLink>
               </Nav>
             </NavBar>
             <div id="social-links">
               <a href="/" alt="" className="social-link">
-                <img
-                  src="./assets/shared/icon-facebook.svg"
-                  alt="facebook-link"
-                />
+                <img src="./assets/icon-facebook.svg" alt="facebook-link" />
               </a>
               <a href="/" alt="" className="social-link">
-                <img
-                  src="./assets/shared/icon-twitter.svg"
-                  alt="twitter-link"
-                />
+                <img src="./assets/icon-twitter.svg" alt="twitter-link" />
               </a>
               <a href="/" alt="" className="social-link">
-                <img
-                  src="./assets/shared/icon-instagram.svg"
-                  alt="instagram-link"
-                />
+                <img src="./assets/icon-instagram.svg" alt="instagram-link" />
               </a>
             </div>
           </div>

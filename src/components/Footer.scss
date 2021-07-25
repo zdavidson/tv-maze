@@ -19,6 +19,16 @@
     padding-top: 0.312rem;
   }
 
+  #logo {
+    background-color: goldenrod;
+    border-radius: 0.25rem;
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+  }
+
   .navigation-link {
     text-decoration: none;
     padding: 0;
@@ -90,12 +100,13 @@
       width: 45%;
     }
 
-    #footer-logo {
-      padding-bottom: 2rem;
-    }
-
     #footer-links {
       align-items: flex-end;
+    }
+
+    #logo {
+      width: 120px;
+      margin-bottom: 2rem;
     }
   }
 }

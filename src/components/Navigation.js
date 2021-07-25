@@ -38,6 +38,9 @@ const Navigation = ({
               setShowIsLoaded={setShowIsLoaded}
             />
           </Nav>
+          <NavLink id="tv-maze" to="/">
+            API
+          </NavLink>
         </NavBar>
       </Container>
     </div>

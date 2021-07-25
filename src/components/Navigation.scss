@@ -4,26 +4,19 @@
 
   font-size: 0.8rem;
 
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 
   background-color: #1a1a1a;
 
   z-index: 10;
 
-  button,
-  button:hover {
-    background-color: transparent;
-  }
-
-  button {
-    padding: 0;
-  }
-
-  #brand {
-    color: white;
-  }
-
-  #nav-links a {
+  #logo {
+    background-color: goldenrod;
+    border-radius: 0.25rem;
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 0.25rem 0.5rem;
     text-decoration: none;
   }
 

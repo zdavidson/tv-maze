@@ -6,8 +6,6 @@ import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
 const Navigation = ({
-  isOpen,
-  setIsOpen,
   shows,
   setShows,
   query,
@@ -20,13 +18,6 @@ const Navigation = ({
     <div className="navigation">
       <Container>
         <NavBar id="nav-bar">
-          <div
-            id="hamburger-icon"
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-          ></div>
-
           <NavLink id="logo" to="/" onClick={() => setDisplay(!display)}>
             TV Maze
           </NavLink>

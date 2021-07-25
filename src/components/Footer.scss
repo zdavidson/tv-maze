@@ -36,6 +36,10 @@
 
   // Small Screens
   @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (max-width: 960px) {
     text-align: center;
 
     .navigation-link {
@@ -57,15 +61,11 @@
       align-items: center;
     }
 
-    #footer-logo,
+    #logo,
     #footer-links,
     #social-links {
       margin: 1rem 0;
     }
-  }
-
-  // Medium Screens
-  @media screen and (min-width: 600px) and (max-width: 960px) {
   }
 
   // Large Screens

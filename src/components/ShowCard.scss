@@ -2,15 +2,6 @@
   // General Styles
   display: flex;
 
-  #show-image img {
-    width: 500px;
-  }
-
-  #show-image,
-  #show-info {
-    margin: 0 1rem;
-  }
-
   #show-title {
     display: flex;
     align-items: center;
@@ -46,14 +37,49 @@
 
   // Small Screens
   @media screen and (max-width: 600px) {
+    #show-image img {
+      margin: 1rem auto;
+      width: 93vw;
+    }
   }
 
   // Medium Screens
-  @media screen and (min-width: 600px) and (max-width: 960px) {
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    text-align: center;
+
+    #show-title {
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 0.5rem;
+      width: 100%;
+
+      div {
+        margin-left: 0.5rem;
+      }
+    }
+
+    #show-image img {
+      width: 50vw;
+    }
+
+    #show-image,
+    #show-info {
+      margin: 1rem;
+    }
   }
 
   // Large Screens
   @media screen and (min-width: 960px) {
     padding: 2rem 10rem;
+
+    #show-image img {
+      width: 500px;
+    }
+
+    #show-image,
+    #show-info {
+      margin: 0 1rem;
+    }
   }
 }

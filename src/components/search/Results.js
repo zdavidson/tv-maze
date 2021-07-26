@@ -1,7 +1,14 @@
 import "./Results.scss";
 import Titles from "./Titles";
 
-const Results = ({ showIsLoaded, query, shows, display, setDisplay }) => {
+const Results = ({
+  showIsLoaded,
+  query,
+  shows,
+  display,
+  setDisplay,
+  setShowIsLoaded,
+}) => {
   return (
     <>
       {display ? (
@@ -15,6 +22,7 @@ const Results = ({ showIsLoaded, query, shows, display, setDisplay }) => {
               showIsLoaded={showIsLoaded}
               display={display}
               setDisplay={setDisplay}
+              setShowIsLoaded={setShowIsLoaded}
             />
           </div>
         </div>

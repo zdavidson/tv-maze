@@ -1,5 +1,5 @@
 import "./Landing.scss";
-import SearchBar from "./SearchBar";
+import SearchBar from "./shared/SearchBar";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 

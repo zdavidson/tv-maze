@@ -13,6 +13,8 @@ const Navigation = ({
   setShowIsLoaded,
   display,
   setDisplay,
+  showCardView,
+  setShowCardView,
 }) => {
   return (
     <div className="navigation">
@@ -29,6 +31,10 @@ const Navigation = ({
               query={query}
               setQuery={setQuery}
               setShowIsLoaded={setShowIsLoaded}
+              display={display}
+              setDisplay={setDisplay}
+              showCardView={showCardView}
+              setShowCardView={setShowCardView}
             />
           </Nav>
           <a id="tv-maze" href="https://www.tvmaze.com/api">

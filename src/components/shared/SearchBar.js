@@ -1,6 +1,16 @@
 import "./SearchBar.scss";
 
-const SearchBar = ({ center, setShows, query, setQuery, setShowIsLoaded }) => {
+const SearchBar = ({
+  center,
+  setShows,
+  query,
+  setQuery,
+  setShowIsLoaded,
+  display,
+  setDisplay,
+  showCardView,
+  setShowCardView,
+}) => {
   // Search all shows
   const url = `https://api.tvmaze.com/search/shows?q=${query}`;
 

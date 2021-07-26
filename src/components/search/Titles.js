@@ -1,19 +1,21 @@
 import "./Titles.scss";
 import { Link } from "react-router-dom";
 
-const Titles = ({ shows, showIsLoaded, display, setDisplay }) => {
-  console.log(shows);
+const Titles = ({
+  shows,
+  showIsLoaded,
+  display,
+  setDisplay,
+  setShowIsLoaded,
+}) => {
   return (
     <div id="titles">
       <h4 id="titles-header">Titles</h4>
       <div id="search-results">
         {showIsLoaded ? (
-          shows.map((item) => {
+          shows.map((item, itemIdx) => {
             return (
-              <div
-                className="result-container"
-                key={Math.floor(Math.random() * 10000)}
-              >
+              <div className="result-container" key={itemIdx}>
                 {item.show.image ? (
                   <img
                     src={item.show.image.medium}
@@ -33,7 +35,10 @@ const Titles = ({ shows, showIsLoaded, display, setDisplay }) => {
                 <Link
                   className="show-link"
                   to="/showCard"
-                  onClick={() => setDisplay(!display)}
+                  onClick={() => {
+                    setDisplay(!display);
+                    setShowIsLoaded(false);
+                  }}
                 >
                   {item.show.name}
                 </Link>

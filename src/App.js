@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import Results from "./components/Results";
+import Navigation from "./components/shared/Navigation";
+import Footer from "./components/shared/Footer";
+import Results from "./components/search/Results";
 import { useState } from "react";
 import Landing from "./components/Landing";
 import ShowCard from "./components/ShowCard";
@@ -11,6 +11,7 @@ const App = () => {
   const [query, setQuery] = useState("");
   const [showIsLoaded, setShowIsLoaded] = useState(false);
   const [display, setDisplay] = useState(true);
+  const [showCardView, setShowCardView] = useState(false);
 
   return (
     <Router>
@@ -23,6 +24,8 @@ const App = () => {
           setShowIsLoaded={setShowIsLoaded}
           display={display}
           setDisplay={setDisplay}
+          showCardView={showCardView}
+          setShowCardView={setShowCardView}
         />
 
         {showIsLoaded ? (
@@ -49,7 +52,49 @@ const App = () => {
           />
         )}
 
-        <Route exact path="/showCard" component={ShowCard} />
+        <Route
+          exact
+          path="/"
+          render={(props) => (
+            <Landing
+              {...props}
+              showIsLoaded={showIsLoaded}
+              shows={shows}
+              query={query}
+              setShows={setShows}
+              setQuery={setQuery}
+              setShowIsLoaded={setShowIsLoaded}
+              display={display}
+              setDisplay={setDisplay}
+            />
+          )}
+        />
+
+        <Route
+          exact
+          path="/search/:query"
+          render={(props) => (
+            <Results
+              {...props}
+              shows={shows}
+              showIsLoaded={showIsLoaded}
+              setShows={setShows}
+              query={query}
+              setQuery={setQuery}
+              setShowIsLoaded={setShowIsLoaded}
+              display={display}
+              setDisplay={setDisplay}
+            />
+          )}
+        />
+
+        <Route
+          exact
+          path="/shows/:name"
+          render={(props) => <ShowCard {...props} />}
+        />
+
+        <Route exact path="/showCard" render={() => <ShowCard />} />
         <Footer />
       </div>
     </Router>

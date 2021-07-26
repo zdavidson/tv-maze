@@ -1,16 +1,7 @@
 import "./SearchBar.scss";
+import { Link } from "react-router-dom";
 
-const SearchBar = ({
-  center,
-  setShows,
-  query,
-  setQuery,
-  setShowIsLoaded,
-  display,
-  setDisplay,
-  showCardView,
-  setShowCardView,
-}) => {
+const SearchBar = ({ center, setShows, query, setQuery, setShowIsLoaded }) => {
   // Search all shows
   const url = `https://api.tvmaze.com/search/shows?q=${query}`;
 
@@ -49,11 +40,13 @@ const SearchBar = ({
       ></input>
 
       <button className="button" id="search-button" type="submit">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png"
-          alt="magnifying-glass"
-          id="magnifying-glass"
-        />
+        <Link to={`/search/${query}`}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png"
+            alt="magnifying-glass"
+            id="magnifying-glass"
+          />
+        </Link>
       </button>
     </form>
   );

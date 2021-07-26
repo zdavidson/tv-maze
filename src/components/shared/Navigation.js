@@ -20,7 +20,7 @@ const Navigation = ({
     <div className="navigation">
       <Container>
         <NavBar id="nav-bar">
-          <NavLink id="logo" to="/" onClick={() => setDisplay(!display)}>
+          <NavLink id="logo" to="/">
             TV Maze
           </NavLink>
 

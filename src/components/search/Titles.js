@@ -1,13 +1,7 @@
 import "./Titles.scss";
 import { Link } from "react-router-dom";
 
-const Titles = ({
-  shows,
-  showIsLoaded,
-  display,
-  setDisplay,
-  setShowIsLoaded,
-}) => {
+const Titles = ({ shows, showIsLoaded }) => {
   return (
     <div id="titles">
       <h4 id="titles-header">Titles</h4>
@@ -32,14 +26,7 @@ const Titles = ({
                   />
                 )}
 
-                <Link
-                  className="show-link"
-                  to="/showCard"
-                  onClick={() => {
-                    setDisplay(!display);
-                    setShowIsLoaded(false);
-                  }}
-                >
+                <Link className="show-link" to={`/shows/${item.show.name}`}>
                   {item.show.name}
                 </Link>
               </div>

@@ -10,26 +10,20 @@ const Results = ({
   setShowIsLoaded,
 }) => {
   return (
-    <>
-      {display ? (
-        <div id="results-container">
-          <div id="results">
-            <span id="results-header">
-              Results for <strong id="query-name">"{query}"</strong>
-            </span>
-            <Titles
-              shows={shows}
-              showIsLoaded={showIsLoaded}
-              display={display}
-              setDisplay={setDisplay}
-              setShowIsLoaded={setShowIsLoaded}
-            />
-          </div>
-        </div>
-      ) : (
-        <div></div>
-      )}
-    </>
+    <div id="results-container">
+      <div id="results">
+        <span id="results-header">
+          Results for <strong id="query-name">"{query}"</strong>
+        </span>
+        <Titles
+          shows={shows}
+          showIsLoaded={showIsLoaded}
+          display={display}
+          setDisplay={setDisplay}
+          setShowIsLoaded={setShowIsLoaded}
+        />
+      </div>
+    </div>
   );
 };
 

@@ -28,30 +28,6 @@ const App = () => {
           setShowCardView={setShowCardView}
         />
 
-        {showIsLoaded ? (
-          <Results
-            shows={shows}
-            showIsLoaded={showIsLoaded}
-            setShows={setShows}
-            query={query}
-            setQuery={setQuery}
-            setShowIsLoaded={setShowIsLoaded}
-            display={display}
-            setDisplay={setDisplay}
-          />
-        ) : (
-          <Landing
-            showIsLoaded={showIsLoaded}
-            shows={shows}
-            query={query}
-            setShows={setShows}
-            setQuery={setQuery}
-            setShowIsLoaded={setShowIsLoaded}
-            display={display}
-            setDisplay={setDisplay}
-          />
-        )}
-
         <Route
           exact
           path="/"
@@ -94,7 +70,6 @@ const App = () => {
           render={(props) => <ShowCard {...props} />}
         />
 
-        <Route exact path="/showCard" render={() => <ShowCard />} />
         <Footer />
       </div>
     </Router>

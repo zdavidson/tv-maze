@@ -6,7 +6,7 @@ const Titles = ({ shows, showIsLoaded }) => {
     <div id="titles">
       <h4 id="titles-header">Titles</h4>
       <div id="search-results">
-        {showIsLoaded ? (
+        {showIsLoaded &&
           shows.map((item, itemIdx) => {
             return (
               <div className="result-container" key={itemIdx}>
@@ -31,10 +31,7 @@ const Titles = ({ shows, showIsLoaded }) => {
                 </Link>
               </div>
             );
-          })
-        ) : (
-          <div></div>
-        )}
+          })}
       </div>
     </div>
   );

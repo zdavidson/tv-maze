@@ -5,17 +5,7 @@ import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
-const Navigation = ({
-  shows,
-  setShows,
-  query,
-  setQuery,
-  setShowIsLoaded,
-  display,
-  setDisplay,
-  showCardView,
-  setShowCardView,
-}) => {
+const Navigation = ({ shows, setShows, query, setQuery, setShowIsLoaded }) => {
   return (
     <div className="navigation">
       <Container>
@@ -31,10 +21,6 @@ const Navigation = ({
               query={query}
               setQuery={setQuery}
               setShowIsLoaded={setShowIsLoaded}
-              display={display}
-              setDisplay={setDisplay}
-              showCardView={showCardView}
-              setShowCardView={setShowCardView}
             />
           </Nav>
           <a id="tv-maze" href="https://www.tvmaze.com/api">

@@ -28,7 +28,7 @@ const ShowCard = ({ ...props }) => {
 
   return (
     <Container>
-      {isLoaded ? (
+      {isLoaded && (
         <div id="show-card">
           <div id="show-image">
             <img src={show.image.original} alt="show-poster" />
@@ -47,11 +47,9 @@ const ShowCard = ({ ...props }) => {
 
             <span id="genre">{show.genres[0]}</span>
 
-            <p id="summary">{show.summary}</p>
+            <p id="summary">{show.summary.replace(/(<([^>]+)>)/gi, " ")}</p>
           </div>
         </div>
-      ) : (
-        <div></div>
       )}
     </Container>
   );

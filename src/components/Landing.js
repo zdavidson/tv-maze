@@ -1,11 +1,8 @@
 import "./Landing.scss";
-import SearchBar from "./shared/SearchBar";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 
-const Landing = ({ query, setShows, setQuery, setShowIsLoaded }) => {
-  const center = true;
-
+const Landing = () => {
   return (
     <div id="landing">
       <Container>
@@ -43,13 +40,6 @@ const Landing = ({ query, setShows, setQuery, setShowIsLoaded }) => {
         </div>
 
         <h2>Or search for one:</h2>
-        <SearchBar
-          center={center}
-          setShows={setShows}
-          query={query}
-          setQuery={setQuery}
-          setShowIsLoaded={setShowIsLoaded}
-        />
       </Container>
     </div>
   );

@@ -28,7 +28,11 @@ const SearchBar = ({ center, setShows, query, setQuery, setShowIsLoaded }) => {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit} id="search-bar">
+    <form
+      className="form"
+      onSubmit={handleSubmit}
+      id={`search-bar${center ? "-center" : ""}`}
+    >
       <input
         id={`search-input${center ? "-center" : ""}`}
         className="input"

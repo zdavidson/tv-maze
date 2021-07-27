@@ -5,6 +5,8 @@ import Footer from "./components/shared/Footer";
 import Results from "./components/search/Results";
 import Landing from "./components/Landing";
 import ShowCard from "./components/ShowCard";
+import SearchBar from "./components/shared/SearchBar";
+import { Container } from "react-bootstrap";
 
 const App = () => {
   const [shows, setShows] = useState({});
@@ -25,14 +27,23 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => (
-            <Landing
-              query={query}
-              setShows={setShows}
-              setQuery={setQuery}
-              setShowIsLoaded={setShowIsLoaded}
-            />
-          )}
+          render={() => {
+            const center = true;
+            return (
+              <>
+                <Landing />
+                <Container>
+                  <SearchBar
+                    center={center}
+                    setShows={setShows}
+                    query={query}
+                    setQuery={setQuery}
+                    setShowIsLoaded={setShowIsLoaded}
+                  />
+                </Container>
+              </>
+            );
+          }}
         />
 
         <Route
